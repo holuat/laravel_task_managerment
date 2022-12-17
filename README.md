@@ -4,7 +4,7 @@
 ## Tài khoản đăng nhập người giao task(task_assigner): 
 - quang@gmail.com/luat@gmail.com.
 - Mật khẩu:12345678
-##Tài khoản đăng nhập người nhận task(task_receiver):
+## Tài khoản đăng nhập người nhận task(task_receiver):
 - member1@gmail.com/member2@gmail.com.
 - Mật khẩu: 12345678
 
