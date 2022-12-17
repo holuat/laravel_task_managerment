@@ -1,0 +1,279 @@
+/**---- Google Fonts ----**/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+/**---- Variable Css ----**/
+:root {
+  --main: #ee4d2d;
+  --white: #ffffff;
+  --text: #0d1728;
+  --grey: #b1b1b1;
+  --shadow: 0px 15px 20px rgba(0, 0, 0, 0.1);
+}
+
+/** ---- Basic Css ---- **/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/** ---- Main Css ---- **/
+section {
+  min-height: 100vh;
+  background-color: #ee4d2d;
+  display: flex;
+  align-items: center;
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+@media screen and (min-width: 750px) {
+  .row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .section{
+    background-color: white;
+  }
+  
+  .row{
+    flex-direction: column;
+  }
+}
+
+.col {
+  flex: 1;
+}
+
+.form-container {
+  background-color: var(--white);
+  padding: 1rem;
+  box-shadow: var(--shadow);
+  border-radius: 1rem;
+}
+
+.left-side img {
+  width: 500px;
+  max-width: 100%;
+}
+
+.profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.profile img {
+  width: 100px;
+}
+
+.profile h3 {
+  font-size: 1.5rem;
+  color: var(--text);
+}
+
+.input-box {
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--grey);
+  height: 3rem;
+  border-radius: 30px;
+  position: relative;
+  padding: 0 1rem;
+  margin-top: 1rem;
+}
+
+.input-box input {
+  border: none;
+  outline: none;
+  margin-left: 1rem;
+}
+
+.input-box label {
+  position: absolute;
+  left: 3rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--grey);
+  transition: all 300ms;
+  background-color: var(--white);
+  padding: 1px 5px;
+}
+
+.input-box input:focus + label,
+.input-box input:valid + label {
+  top: -5%;
+  color: var(--main);
+}
+
+.input-box i {
+  font-size: 1.5rem;
+  color: var(--main);
+}
+
+.helper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.helper input[type="checkbox"] {
+  accent-color: var(--main);
+}
+
+.helper div {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.helper label {
+  color: var(--grey);
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 300ms;
+}
+
+.helper label:hover {
+  color: var(--main);
+}
+
+.text-btn {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: var(--grey);
+  font-size: 0.9rem;
+  border-bottom: 1px solid var(--grey);
+  transition: all 300ms;
+}
+
+.text-btn:hover {
+  color: var(--main);
+  border-color: var(--main);
+}
+
+.contained-btn {
+  background-color: #ee4d2d;
+  border: 2px solid #ee4d2d;
+  width: 100%;
+  margin-top: 1rem;
+  border-radius: 30px;
+  padding: 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  font-variant: normal;
+  color: var(--white);
+  transition: all 300ms;
+}
+
+.contained-btn:hover {
+  color: var(--text);
+  background-color: var(--white);
+  cursor: pointer;
+}
+
+.social-media {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 1rem;
+}
+
+.social-media h3 {
+  color: var(--grey);
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.social-media div {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 10px;
+}
+
+.social-media i {
+  border: 1px solid var(--main);
+  border-radius: 50%;
+  padding: 10px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--grey);
+  transition: all 300ms;
+  background-color: var(--white);
+}
+
+.social-media i:hover {
+  background-color: var(--main);
+  color: var(--white);
+}
+
+.form-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.form-footer div {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.form-footer p {
+  color: var(--grey);
+}
+
+.simple-btn {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: var(--main);
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.signup-form,
+.login-form {
+  animation: show 800ms ease-in;
+}
+
+.signup-form.hide,
+.login-form.hide {
+  display: none;
+}
+
+@keyframes show {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.title{
+  font-size: 32px;
+  font-weight: 500;
+  color: #ee4d2d;
+  line-height: 57px;
+  max-width: 400px;
+  margin-top: 40px;
+  margin-bottom: 32px;
+}
+/** ---responsive--- **/
